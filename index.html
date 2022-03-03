@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./resources/logo.svg" alt="Logo" id="logo" />
+        <div class="wrapper">
+            <div class="part-1">
+                <div class="bill-input">
+                    <label for="bill">Bill</label>
+                    <input type="text" placeholder="" id="bill" />
+                </div>
+                <div class="tip-select">
+                    <label for="">Select Tip %</label>
+                    <div class="btns-tips">
+                        <button id="0.05" name="0.05" value="0.05" onclick="calculateTip(this.value)">
+                5%
+              </button>
+                        <button id="0.1" name="0.1" value="0.1" onclick="calculateTip(this.value)">
+                10%
+              </button>
+                        <button id="0.15" name="0.15" value="0.15" onclick="calculateTip(this.value)">
+                15%
+              </button>
+                        <button id="0.25" name="0.25" value="0.25" onclick="calculateTip(this.value)">
+                25%
+              </button>
+                        <button id="0.5" name="0.5" value="0.5" onclick="calculateTip(this.value)">
+                50%
+              </button>
+                        <input type="text" placeholder="CUSTOM" id="custom" />
+                    </div>
+                </div>
+                <div class="num-of-ppl">
+                    <label for="people">Number of People</label>
+                    <span class="wrong-text display-none">Can't be zero</span>
+                    <input type="text" placeholder="" id="people" class="" />
+                </div>
+            </div>
+            <div class="show-amt">
+                <div class="perPerson">
+                    <div class="text">
+                        <h2>Tip Amount</h2>
+                        <p>/ person</p>
+                    </div>
+                    <div class="amt-money" id="amt-money-person">$0.00</div>
+                </div>
+                <div class="totalPerson">
+                    <div class="text">
+                        <h2>Total</h2>
+                        <p>/ person</p>
+                    </div>
+                    <div class="amt-money" id="amt-money-total">$0.00</div>
+                </div>
+                <button id="reset">RESET</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

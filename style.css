@@ -1,0 +1,199 @@
+:root {
+    --light-blue: #c5e4e7;
+    --strong-blue: #00474b;
+    --selected-blue: #26c2ad;
+    --light-white: #f3f8fb;
+    --light-white-text: #364e4c;
+    --white: #ffffff;
+}
+
+@font-face {
+    font-family: "Space-Mono";
+    src: url(./resources/SpaceMono-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Space-Mono";
+    color: var(--light-white-text);
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-blue);
+}
+
+#logo {
+    margin-block: 2rem;
+}
+
+.wrapper {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    width: 90%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.bill-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.bill-input input {
+    background-color: var(--light-white);
+    color: var(--strong-blue);
+    height: 2rem;
+    border: none;
+    padding: 0.4rem 1rem;
+    font-size: 1.1rem;
+    background-image: url("./resources/icon-dollar.svg");
+    background-size: 0.8rem;
+    background-position: 1rem;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+.tip-select {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.btns-tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+}
+
+.btns-tips button {
+    padding: 0.5rem 1.3rem;
+    background-color: var(--strong-blue);
+    color: var(--white);
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btns-tips button:hover {
+    background-color: var(--selected-blue);
+    color: var(--strong-blue);
+}
+
+.btns-tips input {
+    font-size: 1rem;
+    border: 1px solid var(--light-white-text);
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.num-of-ppl {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.num-of-ppl input {
+    background-color: var(--light-white);
+    color: var(--strong-blue);
+    height: 2rem;
+    border: 1px solid var(--light-white);
+    padding: 0.4rem 1rem;
+    font-size: 1.1rem;
+    background-image: url("./resources/icon-person.svg");
+    background-size: 0.8rem;
+    background-position: 1rem;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+.wrong-text {
+    color: red;
+}
+
+.display-none {
+    display: none;
+}
+
+.wrong-input {
+    border: 1px solid red;
+}
+
+.show-amt {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 2rem 1.4rem;
+    background-color: var(--strong-blue);
+    border-radius: 10px;
+}
+
+.perPerson,
+.totalPerson {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.perPerson .text h2,
+.totalPerson .text h2 {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.perPerson .text p,
+.totalPerson .text p {
+    color: var(--light-blue);
+    font-size: 0.7rem;
+}
+
+.amt-money {
+    color: var(--selected-blue);
+    font-size: 1.6rem;
+}
+
+#reset {
+    padding: 0.5rem 1.3rem;
+    font-size: large;
+    background-color: var(--selected-blue);
+    color: var(--strong-blue);
+    border: none;
+    border-radius: 3px;
+}
+
+@media (min-width: 1280px) {
+    .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 5rem 3rem;
+        border-radius: 40px;
+    }
+    .show-amt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
